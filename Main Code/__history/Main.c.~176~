@@ -1,0 +1,112 @@
+#include <16F877A.h>
+#DEVICE ADC= 10
+#fuses NOWDT, PUT, HS, NOPROTECT, NOLVP
+#use delay(crystal=8000000)
+
+#define LCD_ENABLE_PIN PIN_D2             
+#define LCD_RS_PIN PIN_D0                                                    
+#define LCD_RW_PIN PIN_D1                          
+#define LCD_DATA4 PIN_D7                                                          
+#define LCD_DATA5 PIN_D6                                    
+#define LCD_DATA6 PIN_D5                                                      
+#define LCD_DATA7 PIN_D4                                    
+#include <lcd.c>   
+
+#define SERVO1 PIN_C0
+#define SERVO2 PIN_C1
+
+#define MOTOR PIN_C2
+
+
+int8 RunState=0; //0: mach chay // 1: mach tat
+
+void RunServo1(int32 Angle)
+{
+  int8 i;
+  int32 TimePulseHigh;
+  
+  TimePulseHigh=1650*Angle/180;
+
+  for(i=0;i<10;i++)
+  {
+    output_high(SERVO1);
+    delay_ms(1);
+    delay_us(TimePulseHigh);
+    output_low(SERVO1);
+    delay_ms(18);
+  }
+
+}
+
+void RunServo2(int32 Angle)
+{
+  int8 i;
+  int32 TimePulseHigh;
+  
+  TimePulseHigh=1650*Angle/180;
+
+  for(i=0;i<10;i++)
+  {
+    output_high(SERVO2);
+    delay_ms(1);
+    delay_us(TimePulseHigh);
+    output_low(SERVO2);
+    delay_ms(18);
+  }
+
+}
+
+void RunMotor()
+{
+ output_high(MOTOR);
+}
+
+void StopMotor()
+{
+ output_low(MOTOR);
+}
+
+void DisplayMain()
+{
+ lcd_putc("\f"); // xoa man hinh
+ lcd_putc(" HT PHAN LOAI SP");
+ lcd_gotoxy(1,2);
+ if(RunState==0) lcd_putc("       STOP     ");
+ else lcd_putc("MA:          L: ");
+ 
+}
+
+void main()
+{
+   SET_TRIS_D(0x00);
+   SET_TRIS_B(0xFF);
+   SET_TRIS_C(0x80);
+   Output_low(SERVO1);
+   Output_low(SERVO2);
+   port_B_pullups(0x01); //cho phep dien tro keo port chan B0
+   
+   StopMotor();
+   lcd_init();
+   DisplayMain();
+   while(1)
+   {
+    RunServo2(0);
+    delay_ms(1000);
+    RunServo2(45);
+    delay_ms(1000);
+    RunServo2(90);
+    delay_ms(1000);
+    RunServo2(135);
+    delay_ms(1000);
+    RunServo2(180);
+    delay_ms(1000);
+   
+   
+   }
+  
+    
+}
+  
+  
+  
+

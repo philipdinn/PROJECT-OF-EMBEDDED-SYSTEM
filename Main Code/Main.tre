@@ -1,0 +1,97 @@
+ÀÄMain
+   ÃÄMAIN  0/195  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄOffGate1  0/7  Ram=0
+   ³  ³  ÀÄRunServo1  0/99  Ram=13
+   ³  ³     ÃÄ@MUL3232  0/44  Ram=13
+   ³  ³     ÃÄ@DIV3232  0/81  Ram=13
+   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³     ÃÄ@delay_us1  0/19  Ram=1
+   ³  ³     ÃÄ@delay_us1  0/19  Ram=1
+   ³  ³     ÀÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄOffGate2  0/7  Ram=0
+   ³  ³  ÀÄRunServo2  0/99  Ram=13
+   ³  ³     ÃÄ@MUL3232  0/44  Ram=13
+   ³  ³     ÃÄ@DIV3232  0/81  Ram=13
+   ³  ³     ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³     ÃÄ@delay_us1  0/19  Ram=1
+   ³  ³     ÃÄ@delay_us1  0/19  Ram=1
+   ³  ³     ÀÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄStopMotor  0/7  Ram=0
+   ³  ÃÄlcd_init  0/80  Ram=6
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/54  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/54  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÀÄlcd_send_byte  0/98  Ram=3
+   ³  ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+   ³  ³     ³  ÃÄlcd_read_nibble  0/51  Ram=2
+   ³  ³     ³  ÀÄlcd_read_nibble  0/51  Ram=2
+   ³  ³     ÃÄlcd_send_nibble  0/54  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/54  Ram=1
+   ³  ÃÄDisplayMain  0/40  Ram=0
+   ³  ³  ÃÄ@PSTRINGC7_649  0/80  Ram=4
+   ³  ³  ³  ÃÄlcd_putc  0/56  Ram=1
+   ³  ³  ³  ³  ÃÄlcd_gotoxy  0/20  Ram=4
+   ³  ³  ³  ³  ³  ÀÄlcd_send_byte  0/98  Ram=3
+   ³  ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ³  ÃÄlcd_send_byte  0/98  Ram=3
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ³  ³  ÃÄlcd_gotoxy  0/20  Ram=4
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄlcd_send_byte  0/98  Ram=3
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÀÄlcd_send_byte  0/98  Ram=3
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÀÄlcd_putc  0/56  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC7_649  0/80  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/20  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC7_649  0/80  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄ@PSTRINGC7_649  0/80  Ram=4
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄRunMotor  0/9  Ram=0
+   ³  ÃÄDisplayMain  0/40  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄStopMotor  0/7  Ram=0
+   ³  ÃÄDisplayMain  0/40  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/20  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/56  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄCheckCode  0/62  Ram=3
+   ³  ÃÄDisplayType  0/13  Ram=2
+   ³  ³  ÃÄlcd_gotoxy  0/20  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_putc  0/56  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄOnGate1  0/8  Ram=0
+   ³  ³  ÀÄRunServo1  0/99  Ram=13
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄOffGate1  0/7  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄDisplayMain  0/40  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄDisplayType  0/13  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄOnGate2  0/8  Ram=0
+   ³  ³  ÀÄRunServo2  0/99  Ram=13
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄOffGate2  0/7  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄDisplayMain  0/40  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÀÄDisplayMain  0/40  Ram=0
+   ³     ÀÄ*
+   ÀÄRDA_isr  0/43  Ram=3
+      ÀÄ@GETCH_BIU_1  (Inline)  Ram=0
